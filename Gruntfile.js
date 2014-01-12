@@ -21,7 +21,14 @@ module.exports = function( grunt ) {
 
     // specify an alternate install location for Bower
     bower: {
-      dir: 'app/components'
+      json: 'components.json',
+      install: {
+	  		options: {
+					install: true,
+      		targetDir: 'app/components',
+          cleanBowerDir: true
+	  		}
+      }
     },
 
     // Coffee to JS compilation
@@ -183,5 +190,6 @@ module.exports = function( grunt ) {
 
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
+  grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-crx');
 };

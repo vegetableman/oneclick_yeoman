@@ -4,6 +4,9 @@
   "description": "OneClick Chrome Extension for easy torrent content downloading.",
   "author": "Patrick Williams <patrick@bittorrent.com>",
   "dependencies": {
-    "grunt-crx": "0.1.2"
+    "grunt-crx": ">0.1.2"
+  },
+  "devDependencies": {
+    "grunt-bower-task": "~0.3.4"
   }
 }
